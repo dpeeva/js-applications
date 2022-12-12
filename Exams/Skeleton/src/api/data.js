@@ -16,3 +16,13 @@ const createPostUrl = "" // update url
 export async function createPost(postData) {
     return post(createPostUrl + postData)
 }
+
+const editPostUrl = "" // update url
+export async function editPost(id, postData) {
+    return put(editPostUrl + id, postData)
+}
+
+const deletePostUrl = "" // update url
+export async function deleteById(id) {
+    return del(deletePostUrl + id)
+}
