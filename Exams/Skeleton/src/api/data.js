@@ -7,22 +7,20 @@ export async function getAll() {
     return get(getAllUrl)
 }
 
-const getByIdUrl = "" // update url
+const baseUrl = ""
+
 export async function getById(id) {
-    return get(getByIdUrl + id)
+    return get(baseUrl + id)
 }
 
-const createPostUrl = "" // update url
-export async function createPost(postData) {
-    return post(createPostUrl + postData)
+export async function addItem(data) {
+    return post(baseUrl, data)
 }
 
-const editPostUrl = "" // update url
-export async function editPost(id, postData) {
-    return put(editPostUrl + id, postData)
+export async function updateById(id, data) {
+    return put(baseUrl + id, data)
 }
 
-const deletePostUrl = "" // update url
 export async function deleteById(id) {
-    return del(deletePostUrl + id)
+    return del(baseUrl + id)
 }
